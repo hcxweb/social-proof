@@ -1,0 +1,232 @@
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { font-size: 62.5%; }
+
+body {
+    min-height: 100vh;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.3rem;
+    background-color: var(--White);
+    background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    padding: 13rem 15rem 0 16.5rem;
+}
+
+main {
+    max-width: 135rem;
+    margin: 0 auto;
+}
+
+img { max-width: 100%; }
+
+.top {
+    display: flex;
+    margin-bottom: 7rem;
+}
+
+header { flex: 0 1 43rem; }
+
+h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    letter-spacing: -1.7px;
+    margin-bottom: 1.4rem;
+    color: var(--Very-Dark-Magenta);
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 500;	
+    line-height: 2.5rem;	
+    letter-spacing: -0.5px;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.ratings {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 1.5rem;
+}
+
+.media-rating {
+    max-width: 44.5rem;
+    width: 80%;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: .8rem;
+    padding-left: 3.3rem;
+}
+
+.media-rating:not(:last-child) { margin-bottom: 1.7rem; }
+
+.media-rating:first-of-type { margin-right: 11rem; }
+
+.media-rating:nth-of-type(2) { margin-right: 6.2rem; }
+
+.media-rating:last-of-type { margin-right: 1.5rem; }
+
+.star-icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    margin-right: 3.2rem;
+}
+
+.media-rating p {
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    opacity: .9;
+    padding-top: 1px;
+}
+
+.bottom {
+    display: flex;
+    gap: 3rem;
+}
+
+.user-review {
+    flex: 0 1 31%;
+    height: min-content;
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 7px;
+    padding: 4rem 3.1rem;
+}
+
+.user-review:nth-child(2) { margin-top: 1.7rem; }
+
+.user-review:last-child { margin-top: 3.2rem; }
+
+.user-profile {
+    display: flex;
+    margin-bottom: 2.8rem;
+}
+
+.user-photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 2.4rem;
+}
+
+.user-name {
+    font-weight: 700;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--Light-Grayish-Magenta);
+    opacity:.9;
+}
+
+.user-status {
+    font-weight: 400;	
+    color: var(--Soft-Pink);
+    opacity:.9;
+}
+
+.user-quote {
+    font-weight: 500;
+    line-height: 2.2rem;
+    letter-spacing: -0.2px;
+    color: var(--White);
+    opacity:.7;
+}
+
+@media (max-width: 80em) {
+
+    .ratings { align-items: center; }
+
+    .media-rating {
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        height: 7rem;
+    }
+
+    .media-rating:first-of-type,
+    .media-rating:nth-of-type(2),
+    .media-rating:last-of-type {
+        margin-right: 0;
+    }
+
+    .star-icons {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 70em) {
+    
+    body { padding: 8rem 9rem; }
+
+    .top {
+        flex-direction: column;
+        margin-bottom: 4.7rem;
+    }
+
+    header {
+        flex: 1;
+        text-align: center;
+    }
+
+    h1,
+    .description {
+        margin-bottom: 4rem;
+    }
+
+    .media-rating {
+        max-width: none;
+        width: 100%;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+    
+    .user-review:nth-child(2),
+    .user-review:last-child {
+        margin-top: 0;
+    }
+
+    .user-quote { text-align: left; }
+}
+
+@media (max-width: 36rem) {
+    
+    body {
+        padding: 8.2rem 2.4rem;
+        background-image: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+    }
+    
+    h1 {
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        letter-spacing: -1.14px;
+        margin-bottom: 2.2rem;
+    }
+
+    .description { margin-bottom: 2.2rem; }
+
+    .media-rating { height: 7.8rem; }
+
+    .user-review { height: 2rem; }
+}
