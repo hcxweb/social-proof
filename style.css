@@ -147,7 +147,7 @@ h1 {
     line-height: 2.2rem;
     letter-spacing: -0.2px;
     color: var(--White);
-    opacity:.7;
+    opacity:.9;
 }
 
 @media (max-width: 80em) {
