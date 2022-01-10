@@ -106,15 +106,14 @@ h1 {
 
 .user-review {
     flex: 0 1 31%;
-    height: min-content;
     background-color: var(--Very-Dark-Magenta);
     border-radius: 7px;
     padding: 4rem 3.1rem;
 }
 
-.user-review:nth-child(2) { margin-top: 1.7rem; }
+.user-review:nth-child(2) { transform: translateY(1.7rem); }
 
-.user-review:last-child { margin-top: 3.2rem; }
+.user-review:last-child { transform: translateY(3.2rem); }
 
 .user-profile {
     display: flex;
@@ -146,8 +145,8 @@ h1 {
     font-weight: 500;
     line-height: 2.2rem;
     letter-spacing: -0.2px;
-    color: var(--White);
-    opacity:.9;
+    color: var(--Light-Grayish-Magenta);
+    opacity: .8;
 }
 
 @media (max-width: 80em) {
@@ -228,5 +227,7 @@ h1 {
 
     .media-rating { height: 7.8rem; }
 
-    .user-review { height: 2rem; }
+    .bottom { gap: 0; }
+
+    .user-review { padding: 4rem 3.1rem 3.2rem 3.1rem; }
 }
